@@ -107,24 +107,16 @@ package with a `file:` dependency and register it in `plugins: []`.
 | EmDash | Plugin test suite |
 | ------ | ----------------- |
 | 1.0.1  | 105 passed        |
-| 0.42.0 | 105 passed        |
-| 0.41.0 | 105 passed        |
-| 0.40.1 | 105 passed        |
-| 0.40.0 | 105 passed        |
-| 0.39.1 | 105 passed        |
-| 0.39.0 | 105 passed        |
 
-Declared range: `emdash >=0.39.0`, with no upper bound. The table covers
-**every EmDash release since the floor**. 0.39.0 is the floor because the
-plugin lists collections through `schema:read`, which earlier versions do not
-have.
+Declared range: `emdash >=1.0.1`, with no upper bound. The table covers
+**every EmDash release since the floor**. 1.0.1 is the floor because it is
+EmDash's first stable release; the `emdash@1.0.0` on npm is an accidental
+publish from April 2026, not a stable release.
 
-Reproduce with `scripts/compat-matrix.sh 0.39.0 0.39.1 0.40.0 0.40.1 0.41.0
-0.42.0 1.0.1:0.2.6` from the repo root; EmDash 1.0 needs plugin-test 0.2.6,
-hence `1.0.1:0.2.6`. Last run 2026-09-29, when 1.0.1 was the latest EmDash
-release. A newer EmDash than the table's top row is untested rather than
-unsupported: nothing blocks the install, and this table is how you tell the
-difference.
+Reproduce with `scripts/compat-matrix.sh 1.0.1` from the repo root. Last run
+2026-09-30, when 1.0.1 was the latest EmDash release. A newer EmDash than the
+table's top row is untested rather than unsupported: nothing blocks the
+install, and this table is how you tell the difference.
 
 ## Licence
 

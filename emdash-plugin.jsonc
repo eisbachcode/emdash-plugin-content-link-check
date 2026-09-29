@@ -16,7 +16,7 @@
 	// break. The manifest has no advisory "tested up to" field to express
 	// caution without blocking, so the tested range belongs in the README.
 	"release": {
-		"requires": { "env:emdash": ">=0.39.0" }
+		"requires": { "env:emdash": ">=1.0.1" }
 	},
 	"description": "Checks internal and outbound links in your content on a schedule and reports broken links, dead domains, and redirects in the admin.",
 	"keywords": ["links", "seo", "audit", "maintenance"],

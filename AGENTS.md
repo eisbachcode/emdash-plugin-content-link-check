@@ -7,10 +7,12 @@ Keep `emdash-plugin.jsonc` aligned with the runtime implementation, declare ever
 
 ## Toolchain
 
-`emdash` is a peer with a floor and no ceiling (`>=0.39.0`, the same as
-`env:emdash` in the manifest); the dev dependency stays below the next
-major until the toolchain is moved on purpose. Built with
-`@emdash-cms/plugin-cli@0.12.0` and `@emdash-cms/plugin-test@0.2.3` (EmDash 0.40.1);
+`emdash` is a peer with a floor and no ceiling (`>=1.0.1`, the same as
+`env:emdash` in the manifest). Never write the floor as `>=1.0.0` or
+`^1.0.0`: npm carries an accidental, deprecated `emdash@1.0.0` published
+in April 2026, five months before the real 1.0. The dev dependency stays
+below the next major until the toolchain is moved on purpose. Built with
+`@emdash-cms/plugin-cli@0.13.1` and `@emdash-cms/plugin-test@0.2.6` (EmDash 1.0.1);
 `scripts/compat-matrix.sh` runs the suite against later EmDash releases.
 A plain `pnpm install` is enough.
 
@@ -39,7 +41,7 @@ pnpm install
 pnpm typecheck
 pnpm test        # emdash-plugin validate, then vitest
 pnpm build
-./scripts/compat-matrix.sh 0.39.0 0.39.1 0.40.0 0.40.1 0.41.0 0.42.0 1.0.1:0.2.6   # suites against other EmDash releases
+./scripts/compat-matrix.sh 1.0.1   # suites against other EmDash releases
 ```
 
 ## Releases
